@@ -1,0 +1,28 @@
+Git - sistema de gerenciameno de alterações
+
+github - um sistema de armazenamento de alterações do git
+
+
+
+git clone = baixar arquivos
+
+ls = listar arquivos
+
+git diff = mostrar as alterações
+
+git add = para comitar as alterações = 
+
+git commit -m 'enviar resumo da alteraçõ'
+
+git push origin 'nome da branch'
+
+/*Para atualizar*/
+git pull origin 'nome da branch'
+
+/*mostras sa informações do arquivo*/
+cat 'nome do arquivo'
+
+git pull request
+
+/*criar uma branch nova*/
+git checkout 
