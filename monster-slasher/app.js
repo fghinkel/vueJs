@@ -1,6 +1,7 @@
 new Vue({
     el: '#app',
     data: {
+        reiniciar: false,
         ativar: false,
         vidaP: 100,
         vidaM: 100,
@@ -27,6 +28,7 @@ new Vue({
             } else {
                 this.monsterLife = '0%'
                 this.ativar = false
+                this.reiniciar = true
                 return
             }
 
@@ -36,10 +38,19 @@ new Vue({
             } else {
                 this.playerLife = '0%'
                 this.ativar = false
+                this.reiniciar = true
                 return
             }
         }  
     },
     watch: {
+        reiniciar(antigo, novo) {
+            if( antigo == false ) {
+                this.playerLife = '100%'
+                this.monsterLife = '100%' 
+                this.vidaP = 100
+                this.vidaM = 100
+            }
+        }
     }
 })

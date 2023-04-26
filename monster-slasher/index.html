@@ -30,7 +30,7 @@
             <div  v-if="monsterLife == '0%'" class="win">Você ganhou!!! :)</div>
             <div v-if="playerLife == '0%'" class="lose">Você perdeu! :(</div>
         </div>
-        <div class="panel buttons" v-if="!reiniciar">
+        <div class="panel buttons" v-if="!reiniciar" v-show="!reiniciar">
             <template v-if="ativar">
                 <button  @click="attack" class="btn attack">Ataque</button>
                 <button class="btn especial-attack">Ataque Especial</button>
