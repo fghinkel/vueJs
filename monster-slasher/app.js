@@ -24,22 +24,24 @@ new Vue({
 
             if (this.vidaM - poder[0][0] >= 0){
                 this.vidaM -= poder[0][0];
-                this.monsterLife = this.vidaM + '%';
-            } else {
-                this.monsterLife = '0%'
-                this.ativar = false
-                this.reiniciar = true
-                return
-            }
-
+                this.monsterLife = this.vidaM + '%'; 
+            } 
+            
             if (this.vidaP - poder[1][0] >= 0){
                 this.vidaP -= poder[1][0];
                 this.playerLife = this.vidaP + '%';
-            } else {
+            } 
+            
+            if (this.vidaM - poder[0][0] <= 0)  {
+                this.monsterLife = '0%'
+                this.ativar = false
+                this.reiniciar = true
+            }
+
+            if (this.vidaP - poder[1][0] <= 0) {
                 this.playerLife = '0%'
                 this.ativar = false
                 this.reiniciar = true
-                return
             }
         }  
     },
